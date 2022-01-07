@@ -1,0 +1,1047 @@
+{
+	"info": {
+		"_postman_id": "afe60d18-a6ee-4137-8eec-08c247993215",
+		"name": "users.bugred.ru",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"item": []
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Регистрация нового менеджера",
+					"item": [
+						{
+							"name": "Успешная регистрация",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "tester011@test.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Slava",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое поле емайл",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Max",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345qwe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое поле имя",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "tesqweqwet@test.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "13456qwe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое поле пароль",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "test123123@test.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Igor",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидный емайл",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "test.com123@",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Max",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456qwe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидное имя",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "testtestqwerty@test.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "1234!@<>[]:;",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123455qwe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидный пароль",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "test1234@qw.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Petya",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "<>!@:;[]{}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Добавление новой компании",
+					"item": [
+						{
+							"name": "Успешное создание компании",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"company_name\": \"Тестерs\",\n    \"company_type\": \"ООО\",\n    \"company_users\": [\n        \"test123123@test.com\",\n        \"mill@mail.ru\"\n    ],\n    \"email_owner\": \"test123123@test.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createcompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое поле название",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"company_name\": \"\",\n    \"company_type\": \"ООО\",\n    \"company_users\": [\n        \"test123123@test.com\",\n        \"mill@mail.ru\"\n    ],\n    \"email_owner\": \"test123123@test.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createcompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидный тип компании",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"company_name\": \"Тестерs\",\n    \"company_type\": \"\",\n    \"company_users\": [\n        \"test123123@test.com\",\n        \"mill@mail.ru\"\n    ],\n    \"email_owner\": \"test123123@test.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createcompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Не добавлены сотрудники",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"company_name\": \"Тестерs\",\n    \"company_type\": \"ООО\",\n    \"company_users\": [],\n    \"email_owner\": \"test123123@test.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createcompany"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое поле глава компании",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"company_name\": \"Тестерs\",\n    \"company_type\": \"ООО\",\n    \"company_users\": [\n        \"test123123@test.com\",\n        \"mill@mail.ru\"\n    ],\n    \"email_owner\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createcompany"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Создание нового пользователя",
+					"item": [
+						{
+							"name": "Успешное создание (все поля)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_cu_71@mail.com\",\n  \"name\": \"Test1234\",\n  \"tasks\": [12],\n  \"companies\": [36,37],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Успешное создание (обяз. поля)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_10101@mail.com\",\n  \"name\": \"Test_name01\",\n  \"tasks\": [12, 13],\n  \"companies\": [7, 8]\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидный ИНН",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_cu_72@mail.com\",\n  \"name\": \"Test12345\",\n  \"tasks\": [12],\n  \"companies\": [36,37],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"12345678901\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустой/ невалидный емайл",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"\",\n  \"name\": \"Test12312\",\n  \"tasks\": [12],\n  \"companies\": [36,37],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое / занятое имя пользователя",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_cu_75@mail.com\",\n  \"name\": \"\",\n  \"tasks\": [12],\n  \"companies\": [36,37],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидная / несуществующая задача",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_cu_78@mail.com\",\n  \"name\": \"Test1234\",\n  \"tasks\": [10010010],\n  \"companies\": [36,37],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Несуществующая компания",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_cu_78@mail.com\",\n  \"name\": \"Test123411\",\n  \"tasks\": [12],\n  \"companies\": [1010100101],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Невалидная дата рождения",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"test_cu_7122@mail.com\",\n  \"name\": \"Test12311114\",\n  \"tasks\": [12],\n  \"companies\": [36],\n  \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"a\",\n  \"birthday\":\"01.01.2033\",\n  \"date_start\":\"11.11.2000\"\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Создание нового пользователя с таской(ами)",
+					"item": [
+						{
+							"name": "Успешное создание с таской",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \"email\": \"test_cu_43@mail.com\",\n \"name\": \"Testwithtask\",\n \"tasks\": [{\n   \"title\": \"Задача номер один\",\n   \"description\": \"Lorem\"\n  },\n  {\n   \"title\": \"Задача номер два\",\n   \"description\": \"lorem lorem\"\n  }\n ],\n \"companies\": [19, 20],\n \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuserwithtasks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Успешное создание с таской (Обяз. поля)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \"email\": \"test_cu_226@mail.com\",\n \"name\": \"Testwithtask2\",\n \"tasks\": [{\n   \"title\": \"Первая задача 12\",\n   \"description\": \"Первая задача 11\"\n  },\n  {\n   \"title\": \"Вторая задача 12\",\n   \"description\": \"Вторая задача 11\"\n  }\n ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuserwithtasks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое поле названия таски",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \"email\": \"test_cu_423@mail.com\",\n \"name\": \"Testwithtask1\",\n \"tasks\": [{\n   \"title\": \"\",\n   \"description\": \"Lorem\"\n  },\n  {\n   \"title\": \"Задача номер два\",\n   \"description\": \"lorem lorem\"\n  }\n ],\n \"companies\": [19, 20],\n \"hobby\":\"Стрельба из лука, Настолки\",\n  \"adres\":\"адрес 1\",\n  \"name1\":\"Тестовый, ясен пень\",\n  \"surname1\":\"Иванов\",\n  \"fathername1\":\"Петров\",\n  \"cat\":\"Маруся\",\n  \"dog\":\"Ушастый\",\n  \"parrot\":\"Васька\",\n  \"cavy\":\"Кто ты?\",\n  \"hamster\":\"Хомяк\",\n  \"squirrel\":\"Белая горячка к нам пришла\",\n  \"phone\":\"333 33 33\",\n  \"inn\":\"123456789012\",\n  \"gender\":\"m\",\n  \"birthday\":\"01.01.1900\",\n  \"date_start\":\"11.11.2000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuserwithtasks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Занятое имя пользователя",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \"email\": \"test_cu_226@mail.com\",\n \"name\": \"Testwithtask2\",\n \"tasks\": [{\n   \"title\": \"Первая задача 12\",\n   \"description\": \"\"\n  },\n  {\n   \"title\": \"Вторая задача 12\",\n   \"description\": \"Вторая задача 11\"\n  }\n ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuserwithtasks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Аватар",
+					"item": [
+						{
+							"name": "Добавление аватара",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/Users/user/Downloads/йцу.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/addavatar?email=test_cu_226@mail.com",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"addavatar"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test_cu_226@mail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое значение аватара",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/addavatar?email=test_cu_226@mail.com",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"addavatar"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test_cu_226@mail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Пустое значение емайл",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/Users/user/Downloads/Dp3E3O6WsAArv9k.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"addavatar"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test_cu_226@mail.com",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удаление аватара",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/deleteavatar\n?email=test_cu_226@mail.com",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"deleteavatar\n"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test_cu_226@mail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Поиск сотрудника",
+					"item": [
+						{
+							"name": "Поиск по имени",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"foundCount\": 1,\n\n\"results\": [\n{\n\"name\": \"Машенька\",\n\"email\": \"mill@mail.ru\",\n\n\"companies\": [\n{\n\"name\": \"ООО Тестерs\",\n\"id_company\": 35\n}\n],\n\"why_block\": [\n{\n\"field\": \"email\",\n\"value\": \"mill@mail.ru\"\n}\n],\n\"type\": \"user\"\n}\n]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/magicsearch?query=Машенька",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"magicsearch"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "Машенька"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Тесты",
+					"item": []
+				}
+			]
+		}
+	]
+}
